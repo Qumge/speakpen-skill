@@ -5,7 +5,7 @@ homepage: https://speakpen.app
 license: MIT
 metadata:
   author: SpeakPen
-  version: 0.1.0
+  version: 0.2.0
   category: productivity
   clawdbot:
     requires:

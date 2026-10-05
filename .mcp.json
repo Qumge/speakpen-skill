@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "speakpen": {
+      "type": "http",
+      "url": "https://speakpen.app/mcp"
+    }
+  }
+}

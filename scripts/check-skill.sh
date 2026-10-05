@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
+# Also validates the plugin/marketplace manifests.
 # SKILL.md is what an agent acts on. If the MCP tool list or the read-only API changes, the
 # skill goes stale silently. This checks both against the live service.
 #   SPEAKPEN_TOKEN=<API token> scripts/check-skill.sh
 set -euo pipefail
 base="${SPEAKPEN_URL:-https://speakpen.app}"
 token="${SPEAKPEN_TOKEN:?set SPEAKPEN_TOKEN to an API token}"
-skill="$(dirname "$0")/../SKILL.md"
+root="$(cd "$(dirname "$0")/.." && pwd)"
+skill="$root/skills/speakpen/SKILL.md"
+
+# Manifests: both JSON files parse and the marketplace source path exists.
+for f in .claude-plugin/marketplace.json .claude-plugin/plugin.json .mcp.json; do
+  jq -e . "$root/$f" >/dev/null || { echo "$f is not valid JSON" >&2; exit 1; }
+done
+src="$(jq -r '.plugins[0].source' "$root/.claude-plugin/marketplace.json")"
+[ -d "$root/$src" ] || { echo "marketplace plugin source $src does not exist" >&2; exit 1; }
+[ -f "$skill" ] || { echo "missing $skill" >&2; exit 1; }
 
 live="$(curl -sf -X POST "$base/mcp" -H 'Content-Type: application/json' \
   -H 'Accept: application/json, text/event-stream' -H "Authorization: Bearer $token" \

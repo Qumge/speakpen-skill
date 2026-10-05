@@ -1,0 +1,19 @@
+{
+  "name": "speakpen",
+  "description": "Read your SpeakPen voice notes from Claude Code: find what you said about something, then build on it. Read-only.",
+  "owner": {
+    "name": "SpeakPen",
+    "url": "https://speakpen.app"
+  },
+  "plugins": [
+    {
+      "name": "speakpen",
+      "source": "./",
+      "description": "Find and read your SpeakPen voice notes (MCP first, HTTP fallback) and use them as your own thinking. Read-only.",
+      "version": "0.2.0",
+      "homepage": "https://speakpen.app",
+      "license": "MIT",
+      "keywords": ["speakpen", "voice-notes", "notes", "transcripts", "ideas", "obsidian", "mcp"]
+    }
+  ]
+}

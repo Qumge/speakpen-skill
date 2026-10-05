@@ -23,10 +23,24 @@ Access is read-only: the agent can't create, change or delete notes and never re
 
 ## Install
 
-Copy this folder into your agent's skills directory, e.g. for Claude Code:
+**Claude Code** (installs the skill and the `speakpen` MCP server; you sign in to SpeakPen
+via OAuth the first time the tools are used):
+
+```
+/plugin marketplace add xnjiang/speakpen-skill
+/plugin install speakpen@speakpen
+```
+
+The same from a shell: `claude plugin marketplace add xnjiang/speakpen-skill` then
+`claude plugin install speakpen@speakpen`.
+
+**Other agents / manual** — copy `skills/speakpen` into your agent's skills directory
+(Claude Code: `~/.claude/skills/`), then connect `https://speakpen.app/mcp` in your agent
+or use the HTTP fallback above:
 
 ```bash
-git clone https://github.com/xnjiang/speakpen-skill ~/.claude/skills/speakpen
+git clone https://github.com/xnjiang/speakpen-skill
+cp -R speakpen-skill/skills/speakpen ~/.claude/skills/speakpen
 ```
 
 ## Also

@@ -1,0 +1,14 @@
+{
+  "name": "speakpen",
+  "displayName": "SpeakPen",
+  "version": "0.2.0",
+  "description": "Read your SpeakPen voice notes from any agent: find what you said about something, then build on it. Read-only.",
+  "author": {
+    "name": "SpeakPen",
+    "url": "https://speakpen.app"
+  },
+  "homepage": "https://speakpen.app",
+  "repository": "https://github.com/xnjiang/speakpen-skill",
+  "license": "MIT",
+  "keywords": ["speakpen", "voice-notes", "notes", "transcripts", "ideas", "obsidian", "mcp", "agent-skills"]
+}
