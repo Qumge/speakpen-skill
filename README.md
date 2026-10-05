@@ -13,7 +13,7 @@ Ask your agent things like:
 ## How it reaches your notes
 
 1. **MCP (preferred)** — connect `https://speakpen.app/mcp` once (see
-   [speakpen-mcp](https://github.com/xnjiang/speakpen-mcp)). The skill uses its `search`,
+   [speakpen-mcp](https://github.com/Qumge/speakpen-mcp)). The skill uses its `search`,
    `fetch` and `list_recent_notes` tools.
 2. **HTTP fallback** — set `SPEAKPEN_TOKEN` to an API token from
    https://speakpen.app/app → Settings → API Tokens. The skill uses the read-only API
@@ -27,11 +27,11 @@ Access is read-only: the agent can't create, change or delete notes and never re
 via OAuth the first time the tools are used):
 
 ```
-/plugin marketplace add xnjiang/speakpen-skill
+/plugin marketplace add Qumge/speakpen-skill
 /plugin install speakpen@speakpen
 ```
 
-The same from a shell: `claude plugin marketplace add xnjiang/speakpen-skill` then
+The same from a shell: `claude plugin marketplace add Qumge/speakpen-skill` then
 `claude plugin install speakpen@speakpen`.
 
 **Other agents / manual** — copy `skills/speakpen` into your agent's skills directory
@@ -39,13 +39,13 @@ The same from a shell: `claude plugin marketplace add xnjiang/speakpen-skill` th
 or use the HTTP fallback above:
 
 ```bash
-git clone https://github.com/xnjiang/speakpen-skill
+git clone https://github.com/Qumge/speakpen-skill
 cp -R speakpen-skill/skills/speakpen ~/.claude/skills/speakpen
 ```
 
 ## Also
 
-- [speakpen-mcp](https://github.com/xnjiang/speakpen-mcp) — the hosted MCP server's docs
+- [speakpen-mcp](https://github.com/Qumge/speakpen-mcp) — the hosted MCP server's docs
 - [SpeakPen Sync for Obsidian](https://github.com/xnjiang/speakpen-obsidian) — your notes as Markdown in your vault
 
 ## License

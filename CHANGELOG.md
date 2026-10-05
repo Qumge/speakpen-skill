@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+- Moved to the Qumge organization: `/plugin marketplace add Qumge/speakpen-skill`. The old `xnjiang/speakpen-skill` address redirects.
+
 ## 0.2.0 — 2026-10-05
 
-- Now a Claude Code plugin marketplace: `/plugin marketplace add xnjiang/speakpen-skill`,
+- Now a Claude Code plugin marketplace: `/plugin marketplace add Qumge/speakpen-skill`,
   `/plugin install speakpen@speakpen`. Bundles the hosted MCP server (`.mcp.json`).
 - Skill moved to `skills/speakpen/`; the root `marketplace.json` (not a format Claude Code
   reads) is replaced by `.claude-plugin/marketplace.json`. The old

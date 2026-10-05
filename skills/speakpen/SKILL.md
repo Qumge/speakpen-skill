@@ -5,7 +5,7 @@ homepage: https://speakpen.app
 license: MIT
 metadata:
   author: SpeakPen
-  version: 0.2.0
+  version: 0.2.1
   category: productivity
   clawdbot:
     requires:
@@ -44,7 +44,7 @@ this file is needed.
 Not connected and the user wants it? Tell them to add the server once:
 - ChatGPT / Claude.ai / Claude Desktop: add a custom connector with the URL `https://speakpen.app/mcp`, then approve read-only access on the SpeakPen page that opens.
 - Claude Code: `claude mcp add --transport http speakpen https://speakpen.app/mcp`
-- Others (Cursor, VS Code, Codex): see https://github.com/xnjiang/speakpen-mcp
+- Others (Cursor, VS Code, Codex): see https://github.com/Qumge/speakpen-mcp
 
 ### 2. HTTP API (fallback, when MCP isn't available)
 
