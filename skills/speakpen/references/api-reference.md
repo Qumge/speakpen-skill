@@ -1,7 +1,7 @@
 # SpeakPen HTTP API (read-only subset for agents)
 
 Base URL: `https://speakpen.app`. Every request: `Authorization: Bearer <API token>`
-(created at https://speakpen.app/app → Settings → API Tokens). API tokens are **read-only**:
+(created at https://speakpen.app/app → Settings → Connections → Developers). API tokens are **read-only**:
 any write returns 403.
 
 Prefer the MCP server (`https://speakpen.app/mcp`, tools `search` / `fetch` /

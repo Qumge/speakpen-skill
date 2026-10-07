@@ -5,7 +5,7 @@ homepage: https://speakpen.app
 license: MIT
 metadata:
   author: SpeakPen
-  version: 0.2.1
+  version: 0.2.2
   category: productivity
   clawdbot:
     requires:
@@ -48,7 +48,7 @@ Not connected and the user wants it? Tell them to add the server once:
 
 ### 2. HTTP API (fallback, when MCP isn't available)
 
-Needs an API token the user creates at https://speakpen.app/app → Settings → API Tokens.
+Needs an API token the user creates at https://speakpen.app/app → Settings → Connections → Developers.
 Read it from the environment (`SPEAKPEN_TOKEN`); never ask the user to paste it into chat
 history if their client can set environment variables, and never echo it back.
 

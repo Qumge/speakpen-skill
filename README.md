@@ -16,7 +16,7 @@ Ask your agent things like:
    [speakpen-mcp](https://github.com/Qumge/speakpen-mcp)). The skill uses its `search`,
    `fetch` and `list_recent_notes` tools.
 2. **HTTP fallback** — set `SPEAKPEN_TOKEN` to an API token from
-   https://speakpen.app/app → Settings → API Tokens. The skill uses the read-only API
+   https://speakpen.app/app → Settings → Connections → Developers. The skill uses the read-only API
    (`references/api-reference.md`).
 
 Access is read-only: the agent can't create, change or delete notes and never receives audio.

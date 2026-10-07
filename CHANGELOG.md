@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 — 2026-10-07
+
+- API tokens now live under Settings → Connections → Developers in the SpeakPen web app.
+  Step-by-step setup for every client: https://speakpen.app/connect
+
 ## 0.2.1
 
 - Moved to the Qumge organization: `/plugin marketplace add Qumge/speakpen-skill`. The old `xnjiang/speakpen-skill` address redirects.

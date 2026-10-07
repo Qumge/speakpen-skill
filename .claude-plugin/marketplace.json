@@ -10,7 +10,7 @@
       "name": "speakpen",
       "source": "./",
       "description": "Find and read your SpeakPen voice notes (MCP first, HTTP fallback) and use them as your own thinking. Read-only.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "homepage": "https://speakpen.app",
       "license": "MIT",
       "keywords": ["speakpen", "voice-notes", "notes", "transcripts", "ideas", "obsidian", "mcp"]

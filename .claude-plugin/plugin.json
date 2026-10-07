@@ -1,7 +1,7 @@
 {
   "name": "speakpen",
   "displayName": "SpeakPen",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Read your SpeakPen voice notes from any agent: find what you said about something, then build on it. Read-only.",
   "author": {
     "name": "SpeakPen",
