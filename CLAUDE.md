@@ -1,0 +1,3 @@
+# speakpen-skill
+
+@AGENTS.md
