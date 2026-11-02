@@ -34,14 +34,21 @@ Response (JSON:API):
         "created_at": "2026-10-02T01:51:36.509Z",
         "updated_at": "2026-10-02T01:52:01.112Z",
         "last_transcription_error": null,
-        "audio_url": "…" } } ],
+        "audio_url": null,
+        "summary_status": null,
+        "transcript_status": null } } ],
   "meta": { "current_page": 1, "total_pages": 3, "total_count": 52, "per_page": 20 }
 }
 ```
 
-- `message` is the AI summary; `transcript_text` is the full transcript.
+- `transcript_text` is the original transcript. `message` normally holds a summary, but
+  older failure paths may preserve the original there. If `summary_status` is `pending`,
+  `processing` or `failed`, do not present `message` as a completed AI summary. A null or
+  missing stage is unknown for older notes.
+- Native notes may expose independent `summary_status` and `transcript_status` values;
+  readable original text and summary completion are separate facts.
 - `status` other than `completed` means it's still being processed (or failed) — skip it.
-- `audio_url` is a short-lived signed link to the recording. Agents should ignore it.
+- Read-only API tokens receive `audio_url: null`. This integration does not grant audio access; do not download or display recordings.
 
 ## GET /api/v1/ideas/:id
 

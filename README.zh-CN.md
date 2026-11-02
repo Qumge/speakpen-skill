@@ -2,7 +2,21 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-一个教 AI Agent 使用你自己 **SpeakPen 语音笔记**的技能（`SKILL.md`）：找到你说过的想法，读取原文与摘要，再整理成计划、任务或草稿。
+**让说出口的想法，成为下一步行动。**
+
+这个开源 Agent Skill 教 AI 查找你的 SpeakPen 笔记，先读原文再整理结论，并给出笔记来源。SpeakPen 帮你留下想法，Agent 再基于这些想法帮你梳理计划、待办或草稿。
+
+## 从这里开始
+
+**[先用 SpeakPen 留下你的想法 →](https://speakpen.app/zh-Hans?utm_source=github-speakpen-skill&utm_medium=readme&utm_campaign=voice_to_action)**
+
+[下载 iOS](https://apps.apple.com/app/id6743360755) · [下载 Android](https://play.google.com/store/apps/details?id=com.qumge.speakpen) · [使用网页版](https://speakpen.app/app?utm_source=github-speakpen-skill&utm_medium=readme&utm_campaign=voice_to_action)
+
+1. 在 SpeakPen 录一段想法，等待笔记处理完成。
+2. [安装 Skill](#安装)，再通过 MCP 或 API token 授权访问笔记。
+3. 让 Agent 找出这个想法，帮你梳理下一步行动。
+
+已经有 SpeakPen 笔记？可以[直接安装](#安装)，或查看[连接指南](https://speakpen.app/zh-Hans/connect?utm_source=github-speakpen-skill&utm_medium=readme&utm_campaign=voice_to_action)。安装和复用技能文件免费，读取云端笔记仍需账号授权。
 
 例如，你可以问：
 
@@ -25,7 +39,7 @@
 
 本仓库目前**没有游客模式、可运行的示例数据模式或本地转写引擎**。技能提供使用流程，不能替代 SpeakPen App 或线上服务。
 
-[从免费账号开始](https://speakpen.app/zh-Hans?utm_source=github-speakpen-skill&utm_medium=readme) → 录一段想法 → 等待处理完成 → 连接 Agent → 尝试上面的问题。
+[从免费账号开始](https://speakpen.app/zh-Hans?utm_source=github-speakpen-skill&utm_medium=readme&utm_campaign=voice_to_action) → 录一段想法 → 等待处理完成 → 连接 Agent → 尝试上面的问题。
 
 ## 如何访问笔记
 
@@ -53,15 +67,24 @@ mkdir -p ~/.claude/skills
 cp -R speakpen-skill/skills/speakpen ~/.claude/skills/speakpen
 ```
 
+## Skill 帮助 Agent 做什么
+
+- 按主题或时间查找笔记，引用之前先读取来源。
+- 区分你的原话、Agent 的理解与建议行动。
+- 提供标题、日期和笔记链接，方便你核对。
+- 如实说明没有匹配笔记或工具调用失败，不编造答案。
+
+Skill 服务于已有的 SpeakPen 笔记，不提供本地音频转写、游客演示或独立本地笔记服务器。安装文件不等于获得私有笔记权限，仍需 OAuth 或 API token 授权。
+
 ## 从哪里开始
 
-- [连接指南](https://speakpen.app/zh-Hans/connect?utm_source=github-speakpen-skill&utm_medium=readme)：各客户端的连接和授权步骤。
+- [连接指南](https://speakpen.app/zh-Hans/connect?utm_source=github-speakpen-skill&utm_medium=readme&utm_campaign=voice_to_action)：各客户端的连接和授权步骤。
 - 本仓库提供 Agent 使用流程；[speakpen-mcp](https://github.com/Qumge/speakpen-mcp) 说明托管连接方式，不需要把两个仓库都克隆下来。
 
 ## 相关项目
 
 - [speakpen-mcp](https://github.com/Qumge/speakpen-mcp)：托管 MCP 服务的文档与注册信息。
-- [SpeakPen Sync for Obsidian](https://github.com/xnjiang/speakpen-obsidian)：把笔记同步为知识库里的 Markdown 文件。
+- [SpeakPen Sync for Obsidian](https://github.com/Qumge/speakpen-obsidian)：把笔记同步为知识库里的 Markdown 文件。
 
 ## 许可证
 
